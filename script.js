@@ -9,6 +9,16 @@ submitButton.addEventListener("mouseover", () => {
     submitButton.style.top = randomY + "px";
 });*/
 
+const form = document.querySelector('form');
+const submit = document.querySelector('button[type="submit"]');
+
+form.addEventListener('keydown', function(e) {
+    if(e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        form.submit();
+    }
+});
+
 function getInputValue() {
     const cep = document.querySelector("#cep").value;
     getData(cep);
