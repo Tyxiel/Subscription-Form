@@ -1,0 +1,104 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bistre: #2d231cff;
+  --bistre-2: #2c1a0dff;
+  --bistre-3: #3b2113ff;
+  --seal-brown: #63301cff;
+  --smoky-black: #1c150dff;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-image: url(https://images.unsplash.com/photo-1725493279974-ab7bc4e537c8);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#main-form {
+  margin: 50px auto;
+  width: clamp(550px, 80%, 1000px);
+  border-radius: 12px;
+  background-color: var(--bistre-3);
+  box-shadow: 0 2.5px 5px 3px var(--bistre);
+  color: lightgray;
+  padding: 20px;
+  opacity: 0.95;
+}
+
+#main-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset {
+  display: flex;
+  border: none;
+  gap: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"] {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid black;
+}
+
+label,
+legend {
+  font-size: x-large;
+}
+
+legend {
+  font-weight: 500;
+}
+
+label:not(fieldset label) {
+  font-weight: 500;
+  display: inline-flex;
+  margin: 0 0 5px 0;
+}
+
+input::placeholder,
+select,
+input[type="file"] {
+  font-size: 18px;
+}
+
+button {
+  display: inline-flex;
+  align-self: center;
+  font-size: 24px;
+  border-radius: 12px;
+  padding: 6px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  position: relative;
+  background-color: gray;
+  color: lightgray;
+  transition: all 0.3s ease;
+  transform: scale(1.1);
+}
+
+#address-label, #address, #address-br {
+  display: none;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+#address {
+  color: gray;
+  background-color: #fff;
+  cursor: text;
+}

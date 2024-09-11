@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Inscrição</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <main id="main-form">
+      <form action="" method="post">
+        <label for="name">Nome</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Escreva seu nome"
+          required
+        />
+        <br />
+        <label for="email">E-mail</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Insira seu email"
+          required
+        />
+        <br />
+        <label for="cep">CEP</label>
+        <input
+          type="number"
+          name="CEP"
+          id="cep"
+          title="CEP"
+          placeholder="Insira seu CEP"
+          required
+          min="10000000"
+          max="99999999"
+          onblur="getInputValue()"
+        />
+        <br id="address-br"/>
+        <label for="address" id="address-label">Endereço</label>
+        <input type="text" name="address" id="address" disabled >
+        <br />
+        <label for="tel">Telefone</label>
+        <input
+          type="tel"
+          name="tel"
+          id="tel"
+          placeholder="Insira seu telefone"
+          required
+        />
+        <br />
+        <label for="profile-picture"
+          >Faça upload da sua foto de perfil (Opcional)</label
+        >
+        <input type="file" name="profile-picture" id="profile-picture" />
+        <br />
+        <label for="courses">Cursos Profissionalizante</label>
+        <select name="courses" id="courses">
+          <option value="courses-placeholder" selected hidden disabled>
+            Escolha seu curso
+          </option>
+          <option value="course1">Machine Learn Avanaçado</option>
+          <option value="course2">Desenvolvedor DEVOps</option>
+          <option value="course3">Desenvolvedor Mobile</option>
+        </select>
+        <br />
+        <fieldset>
+          <legend>Qual o seu gênero?</legend>
+          <label for="gender-man">
+            <input
+              type="radio"
+              name="gender"
+              id="gender-man"
+              value="Masculino"
+              required
+            />
+            Masculino
+          </label>
+          <label for="gender-woman">
+            <input
+              type="radio"
+              name="gender"
+              id="gender-woman"
+              value="Feminino"
+              required
+            />
+            Feminino
+          </label>
+        </fieldset>
+        <br />
+        <fieldset>
+          <legend>Unidade Operacional</legend>
+          <label for="cetafaju">
+            <input type="checkbox" name="operational-unit" id="cetafaju" />
+            CETAFAJU
+          </label>
+          <label for="ceticc">
+            <input type="checkbox" name="operational-unit" id="cettic" />
+            CETICC
+          </label>
+          <label for="cetafest">
+            <input type="checkbox" name="operational-unit" id="cetafest" />
+            CETAFEST
+          </label>
+        </fieldset>
+        <button id="submit-button" type="submit">Enviar Inscrição</button>
+      </form>
+    </main>
+  </body>
+</html>
