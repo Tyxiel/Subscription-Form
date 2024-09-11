@@ -38,6 +38,10 @@ body {
   flex-direction: column;
 }
 
+#main-form form h1 {
+  text-align: center;
+}
+
 fieldset {
   display: flex;
   border: none;
